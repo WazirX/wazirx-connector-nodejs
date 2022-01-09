@@ -1,0 +1,29 @@
+{
+  "name": "wazirx-connector-nodejs",
+  "version": "1.0.0",
+  "description": "Node wrapper for the Wazirx exchange REST and WebSocket APIs.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/selvaraj-wazirx/wazirx-connector-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/selvaraj-wazirx/wazirx-connector-nodejs/issues"
+  },
+  "homepage": "https://github.com/selvaraj-wazirx/wazirx-connector-nodejs#readme",
+  "dependencies": {
+    "tsc": "^2.0.3"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
+}
