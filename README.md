@@ -1,1 +1,2 @@
-# wazirx-connector-nodejs
+# wazirx-connector-node
+NodeJS sdk for Wazirx
