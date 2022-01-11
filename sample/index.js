@@ -5,7 +5,7 @@ const {
 let clinet = new Client();
 
 async function run() {
-  let data = await clinet.ping().catch((err) => {
+  let data = await client.ping().catch((err) => {
     console.log(err)
   });
   console.log(data);
