@@ -2,7 +2,7 @@ const {
   Client
  } = require('@wazirx/node-client').v1;
 
-let clinet = new Client();
+let client = new Client();
 
 async function run() {
   let data = await client.ping().catch((err) => {
