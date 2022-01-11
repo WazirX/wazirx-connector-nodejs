@@ -13,7 +13,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('ping', async function() {
-      this.timeout(500);
+      
       let res = await client.ping();
       expect(res).to.have.property('data');
       expect(res).to.have.property('status');
@@ -21,7 +21,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('time', async function() {
-      this.timeout(500);
+      
       let res = await client.time();
       expect(res).to.have.property('data');
       expect(res.data).to.have.property('serverTime');
@@ -30,7 +30,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('systemStatus', async function() {
-      this.timeout(500);
+      
       let res = await client.systemStatus();
       expect(res).to.have.property('data');
       expect(res.data).to.have.property('status');
@@ -42,7 +42,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('exchangeInfo', async function() {
-      this.timeout(500);
+      
       let res = await client.exchangeInfo();
       expect(res).to.have.property('data');
       expect(res.data).to.have.property('symbols');
@@ -59,7 +59,7 @@ describe('Wazirx Node SDK specs', () => {
       client = new Client();
     });
     it('tickers', async function() {
-      this.timeout(500);
+      
       let res = await client.tickers();
       expect(res.status).to.eql(200);
       expect(res).to.have.property('data');
@@ -68,7 +68,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('ticker', async function() {
-      this.timeout(500);
+      
       let res = await client.ticker({symbol: 'btcinr'});
       expect(res.status).to.eql(200);
       expect(res).to.have.property('data');
@@ -77,7 +77,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('depth', async function() {
-      this.timeout(500);
+      
       let res = await client.depth({symbol: 'btcinr', limit: 10});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -89,7 +89,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('trades', async function() {
-      this.timeout(500);
+      
       let res = await client.trades({symbol: 'btcinr', limit: 10});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -107,7 +107,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('historicalTrades', async () => {
-      this.timeout(500);
+      
       let res = await client.historicalTrades({symbol: 'btcinr', limit: 10, recvWindow: 10000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -146,7 +146,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('openOrders', async () => {
-      this.timeout(500);
+      
       let res = await client.openOrders({orderId: 23223196, limit: 1, recvWindow: 20000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -154,7 +154,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('allOrders', async () => {
-      this.timeout(500);
+      
       let res = await client.openOrders({symbol: 'btcusdt', orderId: 23223196, recvWindow: 20000, startTime: 1590148051000, limit: 100});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -162,7 +162,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it.skip('cancelOrder', async () => {
-      this.timeout(500);
+      
       let res = await client.cancelOrder({symbol: 'btcinr', recvWindow: 10000, orderId:23223196});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -170,7 +170,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it.skip('cancelAllOrder', async () => {
-      this.timeout(500);
+      
       let res = await client.cancelAllOrder({symbol: 'btcinr', recvWindow: 10000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -187,7 +187,7 @@ describe('Wazirx Node SDK specs', () => {
     });
     
     it('account', async () => {
-      this.timeout(500);
+      
       let res = await client.account({recvWindow: 20000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -196,7 +196,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('funds', async () => {
-      this.timeout(500);
+      
       let res = await client.funds({recvWindow: 20000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -214,7 +214,7 @@ describe('Wazirx Node SDK specs', () => {
     });
     
     it('wsAuthToken', async () => {
-      this.timeout(500);
+      
       let res = await client.wsAuthToken({recvWindow: 10000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
