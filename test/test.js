@@ -6,6 +6,7 @@ var expect = chai.expect;
 var should = chai.should();
 
 describe('Wazirx Node SDK specs', () => {
+  beforeEach(done => setTimeout(done, 3000));
   describe('should general methods works without API Key and Secrect Key', () => {
     let client;
     before(function() {
@@ -13,7 +14,7 @@ describe('Wazirx Node SDK specs', () => {
     });
 
     it('ping', async function() {
-      
+    
       let res = await client.ping();
       expect(res).to.have.property('data');
       expect(res).to.have.property('status');
