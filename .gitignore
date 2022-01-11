@@ -1,2 +1,6 @@
-
-node_modules/*
+node_modules/
+.gitignore
+lib/
+.env
+sample/node_modules/
+sample/package.json
