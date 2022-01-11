@@ -103,11 +103,10 @@ describe('Wazirx Node SDK specs', () => {
     let publicClient;
     before(function() {
       publicClient = new Client();
-      client = new Client(process.env.API_KEY, process.env.API_SECRECT);
+      client = new Client(process.env.WAZIRX_API_KEY, process.env.WAZIRX_API_SECRET);
     });
 
     it('historicalTrades', async () => {
-      
       let res = await client.historicalTrades({symbol: 'btcinr', limit: 10, recvWindow: 10000});
       expect(res).to.have.property('status');
       expect(res.status).to.eql(200);
@@ -121,7 +120,7 @@ describe('Wazirx Node SDK specs', () => {
     let publicClient;
     before(function() {
       publicClient = new Client();
-      client = new Client(process.env.API_KEY, process.env.API_SECRECT);
+      client = new Client(process.env.WAZIRX_API_KEY, process.env.WAZIRX_API_SECRET);
     });
     
     it.skip('order', async () => {
@@ -183,7 +182,7 @@ describe('Wazirx Node SDK specs', () => {
     let publicClient;
     before(function() {
       publicClient = new Client();
-      client = new Client(process.env.API_KEY, process.env.API_SECRECT);
+      client = new Client(process.env.WAZIRX_API_KEY, process.env.WAZIRX_API_SECRET);
     });
     
     it('account', async () => {
@@ -210,7 +209,7 @@ describe('Wazirx Node SDK specs', () => {
     let publicClient;
     before(function() {
       publicClient = new Client();
-      client = new Client(process.env.API_KEY, process.env.API_SECRECT);
+      client = new Client(process.env.WAZIRX_API_KEY, process.env.WAZIRX_API_SECRET);
     });
     
     it('wsAuthToken', async () => {

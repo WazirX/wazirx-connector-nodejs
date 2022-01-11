@@ -12,7 +12,7 @@
     "build:esm": "node tools/cleanup esm && tsc -p config/tsconfig.esm.json",
     "build:types": "node tools/cleanup types && tsc -p config/tsconfig.types.json",
     "prepare": "npm run build",
-    "test": "SET NODE_ENV=test && mocha test/ --timeout 10000"
+    "test": "mocha test/test.js -r dotenv/config --timeout 10000"
   },
   "repository": {
     "type": "git",
