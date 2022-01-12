@@ -37,15 +37,16 @@ For testing run ```npm test```
 
 Create a new instance of the REST Client:
 
-# If you only plan on touching public API endpoints, you can forgo any arguments
+
 ```js
+// If you only plan on touching public API endpoints, no need to pass any arguments
 const { 
   Client
  } = require('@wazirx/node-client').v1;
 
 let client = new Client();
 
-# Otherwise provide an apiKey and secretKey as keyword arguments
+// Otherwise provide an apiKey and secretKey as keyword arguments
 const { 
   Client
  } = require('@wazirx/node-client').v1;
