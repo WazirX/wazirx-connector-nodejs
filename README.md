@@ -1,5 +1,7 @@
 # Wazirx NodeJS
 
+[![Npm Version](https://img.shields.io/badge/npm%20version-1.0.0-brightgreen?style=flat&logo=node.js)](https://docs.wazirx.com)
+
 This is an official NodeJS wrapper for the Wazirx exchange REST and WebSocket APIs.
 
 ##### Notice
