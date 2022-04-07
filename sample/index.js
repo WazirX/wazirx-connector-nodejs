@@ -4,25 +4,25 @@ let apiKey = 'your api key';
 let secretKey = 'your secret key';
 
 let client = new Client(apiKey, secretKey);
-let wsClient = new WsClient(apiKey, secretKey);
+let ws = new WsClient(apiKey, secretKey);
 
 
 async function run() {
   // WS Example
-  await wsClient.connect().catch((err) => {
+  await ws.connect().catch((err) => {
     console.log(err)
   });
 
-  await wsClient.ping().catch((err) => {
+  await ws.ping().catch((err) => {
     console.log(err)
   });
-  await wsClient.depth(["btcinr","btcusdt"]).catch((err) => {
+  await ws.depth(["btcinr","btcusdt"]).catch((err) => {
     console.log(err)
   });
-  await wsClient.trades(["btcinr","btcusdt"]).catch((err) => {
+  await ws.trades(["btcinr","btcusdt"]).catch((err) => {
     console.log(err)
   });
-  await wsClient.multiStream([{"symbol" : ["btcinr","btcusdt"], "type" : "depth"}, {"symbol" : ["btcinr","btcusdt"], "type" : "trades"}, {"type" : "ticker"}]).catch((err) => {
+  await ws.multiStream([{"symbol" : ["btcinr","btcusdt"], "type" : "depth"}, {"symbol" : ["btcinr","btcusdt"], "type" : "trades"}, {"type" : "ticker"}]).catch((err) => {
     console.log(err)
   });
   // API Example
