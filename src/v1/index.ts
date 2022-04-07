@@ -1,4 +1,5 @@
-import { Client } from "./client";
+import { Client, WsClient } from "./client";
 export {
-  Client
+  Client,
+  WsClient
 }
