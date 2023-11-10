@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "@types/crypto-js": "^4.1.0",
-    "axios": "^0.24.0",
+    "axios": "^1.6.0",
     "crypto-js": "^4.1.1",
     "module_name": "^1.0.0",
     "ws": "^8.5.0"
